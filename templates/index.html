@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violence Detection AI - Advanced Deep Learning System</title>
+    <meta name="description"
+        content="State-of-the-art 3D-CNN + LSTM technology for real-time violence behavior recognition with high accuracy and reliability">
+    <meta name="keywords"
+        content="violence detection, deep learning, 3D-CNN, LSTM, computer vision, AI, behavior analysis">
+    <meta name="author" content="Violence Detection AI Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://violence-detection-ai.com/">
+    <meta property="og:title" content="Violence Detection AI - Advanced Deep Learning System">
+    <meta property="og:description"
+        content="State-of-the-art 3D-CNN + LSTM technology for real-time violence behavior recognition">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://violence-detection-ai.com/">
+    <meta property="twitter:title" content="Violence Detection AI - Advanced Deep Learning System">
+    <meta property="twitter:description"
+        content="State-of-the-art 3D-CNN + LSTM technology for real-time violence behavior recognition">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Violence Detection AI",
+      "description": "Advanced AI system for violence detection using 3D-CNN and LSTM technology",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Violence Detection AI</h1>
+                        <p>3D-CNN + LSTM Behavior Analysis</p>
+                    </div>
+                </div>
+
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                    <div class="status-indicator" id="statusIndicator">
+                        <span class="status-dot" id="statusDot" aria-hidden="true"></span>
+                        <span class="status-text" id="statusText">Model Ready</span>
+                    </div>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home" role="main">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <span>Advanced AI Technology</span>
+                </div>
+
+                <h1 class="hero-title">Advanced Violence Detection</h1>
+                <h2 class="hero-subtitle">Using Deep Learning</h2>
+
+                <p class="hero-description">
+                    Our state-of-the-art 3D Convolutional Neural Network combined with LSTM technology provides
+                    real-time violence behavior recognition with high accuracy and reliability for enhanced security
+                    systems.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#demo" class="btn-primary" onclick="scrollToDemo()">
+                        <i class="fas fa-play" aria-hidden="true"></i>
+                        Try Live Demo
+                    </a>
+                    <a href="#demo" class="btn-secondary" onclick="scrollToDemo()">
+                        <i class="fas fa-upload" aria-hidden="true"></i>
+                        Upload Video
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>95%+</h3>
+                        <p>Accuracy Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>&lt;100ms</h3>
+                        <p>Response Time</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Real-time Monitoring</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100MB</h3>
+                        <p>Max File Size</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Core Features</div>
+                <h2 class="section-title">Cutting-Edge AI Technology</h2>
+                <p class="section-description">
+                    Our advanced system combines multiple deep learning techniques to deliver
+                    unparalleled accuracy in violence detection and behavior analysis.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-cube" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">3D-CNN Architecture</h3>
+                    <p class="feature-description">
+                        Advanced spatial-temporal feature extraction using 3D Convolutional Neural Networks
+                        for comprehensive video analysis.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Spatial feature extraction</li>
+                        <li>Temporal pattern recognition</li>
+                        <li>Multi-scale analysis</li>
+                        <li>Optimized performance</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">LSTM Processing</h3>
+                    <p class="feature-description">
+                        Long Short-Term Memory networks for sequential pattern recognition
+                        and long-term dependency modeling.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Sequential analysis</li>
+                        <li>Memory retention</li>
+                        <li>Context understanding</li>
+                        <li>Behavior prediction</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-bullseye" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Real-time Detection</h3>
+                    <p class="feature-description">
+                        Instant analysis with high accuracy for live video streams
+                        and uploaded content with minimal latency.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Live webcam analysis</li>
+                        <li>Batch processing</li>
+                        <li>High throughput</li>
+                        <li>Scalable architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="demo-container">
+                <div class="demo-header">
+                    <h2 class="demo-title">Violence Detection System</h2>
+                    <p class="demo-subtitle">Upload a video file or use your webcam for real-time analysis</p>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <nav class="nav-tabs" role="tablist" aria-label="Demo options">
+                    <button class="tab-btn active" data-tab="upload" role="tab" aria-selected="true"
+                        aria-controls="upload-tab" id="upload-tab-btn">
+                        <i class="fas fa-upload" aria-hidden="true"></i>
+                        <span>Upload Video</span>
+                    </button>
+                    <button class="tab-btn" data-tab="webcam" role="tab" aria-selected="false"
+                        aria-controls="webcam-tab" id="webcam-tab-btn">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                        <span>Live Webcam</span>
+                    </button>
+                    <button class="tab-btn" data-tab="how-it-works" role="tab" aria-selected="false"
+                        aria-controls="how-it-works-tab" id="how-it-works-tab-btn">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        <span>How It Works</span>
+                    </button>
+                    <button class="tab-btn" data-tab="settings" role="tab" aria-selected="false"
+                        aria-controls="settings-tab" id="settings-tab-btn">
+                        <i class="fas fa-cog" aria-hidden="true"></i>
+                        <span>Settings</span>
+                    </button>
+                </nav>
+
+                <!-- Upload Video Tab -->
+                <div class="tab-content active" id="upload-tab" role="tabpanel" aria-labelledby="upload-tab-btn">
+                    <div class="upload-area" id="uploadArea" tabindex="0" role="button" aria-label="Upload video area">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="upload-title">Upload Video for Analysis</h3>
+                        <p class="upload-subtitle">Drag and drop your video file here or click to browse</p>
+                        <p class="upload-formats">Supported formats: MP4, AVI, MOV, MKV, WEBM, FLV (Max: 100MB)</p>
+                        <input type="file" id="videoInput" accept="video/*" hidden aria-label="Select video file">
+                        <button class="upload-btn" id="uploadBtn" aria-label="Browse files">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            Browse Files
+                        </button>
+
+                        <!-- Processing Overlay -->
+                        <div class="processing-overlay" id="processingOverlay">
+                            <div class="processing-content">
+                                <div class="spinner" aria-hidden="true"></div>
+                                <p class="processing-text" id="processingText">Processing video...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Preview -->
+                    <div class="video-preview" id="videoPreview" style="display: none;">
+                        <video id="previewVideo" controls preload="metadata" aria-label="Video preview">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-info" id="videoInfo" role="region" aria-label="Video information">
+                            <div class="video-info-grid" id="videoInfoGrid"></div>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Progress -->
+                    <div class="analysis-section" id="analysisSection" style="display: none;" role="region"
+                        aria-label="Analysis progress">
+                        <div class="progress-container">
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                                aria-valuenow="0" aria-label="Analysis progress">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <p class="progress-text" id="progressText">Preparing analysis...</p>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Results -->
+                    <div class="result-section" id="resultSection" style="display: none;" role="region"
+                        aria-label="Analysis results">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <h3 class="result-title">Analysis Results</h3>
+                                <span class="timestamp" id="resultTimestamp"></span>
+                            </div>
+                            <div class="result-content">
+                                <div class="prediction-label" id="predictionLabel" role="alert">
+                                    <span class="label-text" id="labelText"></span>
+                                    <span class="confidence-text" id="confidenceText"></span>
+                                </div>
+                                <div class="confidence-bar" role="progressbar" aria-label="Confidence level">
+                                    <div class="confidence-fill" id="confidenceFill"></div>
+                                </div>
+                                <div class="video-details" id="videoDetails" role="region" aria-label="Video details">
+                                </div>
+                            </div>
+                            <div style="margin-top: 32px; display: flex; justify-content: center;">
+                                <button class="btn-primary" onclick="resetUpload()" aria-label="Analyze another video">
+                                    <i class="fas fa-redo" aria-hidden="true"></i>
+                                    Analyze Another Video
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Webcam Tab -->
+                <div class="tab-content" id="webcam-tab" role="tabpanel" aria-labelledby="webcam-tab-btn">
+                    <div class="webcam-container">
+                        <video id="webcamVideo" autoplay muted playsinline aria-label="Webcam video"></video>
+                        <canvas id="webcamCanvas" style="display: none;" aria-hidden="true"></canvas>
+                        <div class="webcam-overlay" id="webcamOverlay">
+                            <div class="webcam-status" id="webcamStatus">
+                                <i class="fas fa-video" aria-hidden="true"></i>
+                                <h3>Camera Access Required</h3>
+                                <p>Click "Start Camera" to begin real-time violence detection analysis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="webcam-controls">
+                        <button class="control-btn" id="startWebcam" aria-label="Start camera">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                            <span>Start Camera</span>
+                        </button>
+                        <button class="control-btn danger" id="stopWebcam" style="display: none;"
+                            aria-label="Stop camera">
+                            <i class="fas fa-stop" aria-hidden="true"></i>
+                            <span>Stop Camera</span>
+                        </button>
+                    </div>
+
+                    <div class="webcam-result" id="webcamResult" style="display: none;" role="region"
+                        aria-label="Real-time analysis results">
+                        <div class="realtime-prediction">
+                            <h4 class="realtime-title">Real-time Analysis</h4>
+                            <div class="prediction-indicator" id="webcamPrediction" role="alert">
+                                <span class="prediction-text" id="webcamPredictionText"></span>
+                                <span class="confidence-value" id="webcamConfidenceValue"></span>
+                            </div>
+                            <div class="realtime-info">
+                                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                Analysis updates every second • High accuracy detection
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works Tab -->
+                <div class="tab-content" id="how-it-works-tab" role="tabpanel" aria-labelledby="how-it-works-tab-btn">
+                    <div class="settings-card">
+                        <h3>
+                            <i class="fas fa-brain" style="color: var(--primary-color);" aria-hidden="true"></i>
+                            How Our AI System Works
+                        </h3>
+                        <div style="line-height: 1.6; color: var(--gray-600);">
+                            <div style="margin-bottom: 32px;">
+                                <h4
+                                    style="color: var(--gray-900); margin-bottom: 12px; font-size: 18px; font-weight: 600;">
+                                    <span
+                                        style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">1</span>
+                                    Video Input Processing
+                                </h4>
+                                <p style="margin-bottom: 16px; margin-left: 36px;">The system accepts video input
+                                    through file upload or real-time webcam feed. Videos are preprocessed to extract
+                                    individual frames at optimal resolution for analysis.</p>
+                            </div>
+
+                            <div style="margin-bottom: 32px;">
+                                <h4
+                                    style="color: var(--gray-900); margin-bottom: 12px; font-size: 18px; font-weight: 600;">
+                                    <span
+                                        style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">2</span>
+                                    3D-CNN Feature Extraction
+                                </h4>
+                                <p style="margin-bottom: 16px; margin-left: 36px;">Our 3D Convolutional Neural Network
+                                    analyzes spatial-temporal features from video sequences, capturing both visual
+                                    patterns and motion dynamics across multiple frames.</p>
+                            </div>
+
+                            <div style="margin-bottom: 32px;">
+                                <h4
+                                    style="color: var(--gray-900); margin-bottom: 12px; font-size: 18px; font-weight: 600;">
+                                    <span
+                                        style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">3</span>
+                                    LSTM Sequential Analysis
+                                </h4>
+                                <p style="margin-bottom: 16px; margin-left: 36px;">Long Short-Term Memory networks
+                                    process the extracted features to understand temporal relationships and behavioral
+                                    patterns over time sequences.</p>
+                            </div>
+
+                            <div style="margin-bottom: 32px;">
+                                <h4
+                                    style="color: var(--gray-900); margin-bottom: 12px; font-size: 18px; font-weight: 600;">
+                                    <span
+                                        style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">4</span>
+                                    Classification & Results
+                                </h4>
+                                <p style="margin-bottom: 16px; margin-left: 36px;">The final classification layer
+                                    outputs probability scores for violence detection, providing confidence levels and
+                                    detailed analysis results with high accuracy.</p>
+                            </div>
+
+                            <div
+                                style="background: var(--gray-50); padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-top: 32px;">
+                                <h4
+                                    style="color: var(--gray-900); margin-bottom: 16px; font-size: 18px; font-weight: 600;">
+                                    <i class="fas fa-lightbulb" style="color: var(--primary-color); margin-right: 8px;"
+                                        aria-hidden="true"></i>
+                                    Key Advantages
+                                </h4>
+                                <div
+                                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                                    <ul style="margin-left: 20px; color: var(--gray-700);">
+                                        <li>High accuracy through deep learning</li>
+                                        <li>Real-time processing capabilities</li>
+                                    </ul>
+                                    <ul style="margin-left: 20px; color: var(--gray-700);">
+                                        <li>Robust to various video conditions</li>
+                                        <li>Scalable and efficient architecture</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-content" id="settings-tab" role="tabpanel" aria-labelledby="settings-tab-btn">
+                    <div class="settings-section">
+                        <!-- System Information -->
+                        <div class="settings-card" style="margin-bottom: 32px;">
+                            <h3>
+                                <i class="fas fa-server" style="color: var(--primary-color);" aria-hidden="true"></i>
+                                System Information
+                            </h3>
+                            <div class="system-info" id="systemInfo">
+                                <div class="info-item">
+                                    <span class="info-label">
+                                        <i class="fas fa-brain" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        AI Model Status
+                                    </span>
+                                    <span class="info-value" id="modelStatus">Checking...</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">
+                                        <i class="fas fa-folder" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Model Path
+                                    </span>
+                                    <span class="info-value" id="modelPath">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">
+                                        <i class="fas fa-film" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Frames per Clip
+                                    </span>
+                                    <span class="info-value" id="framesPerClip">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">
+                                        <i class="fas fa-expand-arrows-alt" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Image Size
+                                    </span>
+                                    <span class="info-value" id="imgSize">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">
+                                        <i class="fas fa-clock" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        System Uptime
+                                    </span>
+                                    <span class="info-value" id="uptime">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Configuration Settings -->
+                        <div class="settings-card" style="margin-bottom: 32px;">
+                            <h3>
+                                <i class="fas fa-sliders-h" style="color: var(--primary-color);" aria-hidden="true"></i>
+                                Analysis Configuration
+                            </h3>
+                            <form class="config-form" id="configForm">
+                                <div class="form-group">
+                                    <label for="threshold">
+                                        <i class="fas fa-percentage" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Detection Threshold (%)
+                                    </label>
+                                    <input type="number" id="threshold" min="0" max="100" step="1" value="50"
+                                        aria-describedby="threshold-help">
+                                    <small id="threshold-help" class="form-help">
+                                        Threshold for violence classification (0-100%). Higher values require more
+                                        confidence.
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="frameSkip">
+                                        <i class="fas fa-forward" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Frame Skip
+                                    </label>
+                                    <input type="number" id="frameSkip" min="1" max="10" step="1" value="1"
+                                        aria-describedby="frameskip-help">
+                                    <small id="frameskip-help" class="form-help">
+                                        Number of frames to skip for faster processing. Higher values increase speed but
+                                        may reduce accuracy.
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; cursor: pointer;">
+                                        <input type="checkbox" id="showFps" checked>
+                                        <i class="fas fa-tachometer-alt" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Show FPS in analysis
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; cursor: pointer;">
+                                        <input type="checkbox" id="showConfidence" checked>
+                                        <i class="fas fa-chart-bar" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Show detailed confidence metrics
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; cursor: pointer;">
+                                        <input type="checkbox" id="autoSaveLogs" checked>
+                                        <i class="fas fa-save" style="color: var(--primary-color);"
+                                            aria-hidden="true"></i>
+                                        Auto-save analysis logs
+                                    </label>
+                                </div>
+
+                                <button type="button" class="save-btn" id="saveConfig" aria-label="Save configuration">
+                                    <i class="fas fa-check" aria-hidden="true"></i>
+                                    <span>Save Configuration</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Technical Specifications -->
+                        <div class="settings-card" style="margin-bottom: 32px;">
+                            <h3>
+                                <i class="fas fa-cogs" style="color: var(--primary-color);" aria-hidden="true"></i>
+                                Technical Specifications
+                            </h3>
+                            <div style="line-height: 1.6; color: var(--gray-600); font-size: 14px;">
+                                <div
+                                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                                    <div>
+                                        <h4
+                                            style="color: var(--gray-900); margin-bottom: 12px; font-size: 16px; font-weight: 600;">
+                                            Model Architecture</h4>
+                                        <ul style="margin-left: 20px; list-style-type: disc;">
+                                            <li>3D Convolutional Neural Network</li>
+                                            <li>LSTM Sequential Processing</li>
+                                            <li>TensorFlow/Keras Framework</li>
+                                            <li>Optimized for Real-time Analysis</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            style="color: var(--gray-900); margin-bottom: 12px; font-size: 16px; font-weight: 600;">
+                                            Supported Formats</h4>
+                                        <ul style="margin-left: 20px; list-style-type: disc;">
+                                            <li>MP4, AVI, MOV</li>
+                                            <li>MKV, WEBM, FLV</li>
+                                            <li>Max file size: 100MB</li>
+                                            <li>Real-time webcam feed</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div
+                                    style="background: var(--gray-50); padding: 20px; border-radius: 8px; margin-top: 24px; border: 1px solid var(--gray-200);">
+                                    <h4
+                                        style="color: var(--gray-900); margin-bottom: 12px; font-size: 16px; font-weight: 600;">
+                                        Performance Metrics</h4>
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; text-align: center;">
+                                        <div>
+                                            <div
+                                                style="font-size: 24px; font-weight: 700; color: var(--primary-color);">
+                                                95%+</div>
+                                            <div style="font-size: 12px; color: var(--gray-600);">Accuracy</div>
+                                        </div>
+                                        <div>
+                                            <div
+                                                style="font-size: 24px; font-weight: 700; color: var(--primary-color);">
+                                                &lt;100ms</div>
+                                            <div style="font-size: 12px; color: var(--gray-600);">Latency</div>
+                                        </div>
+                                        <div>
+                                            <div
+                                                style="font-size: 24px; font-weight: 700; color: var(--primary-color);">
+                                                30fps</div>
+                                            <div style="font-size: 12px; color: var(--gray-600);">Max FPS</div>
+                                        </div>
+                                        <div>
+                                            <div
+                                                style="font-size: 24px; font-weight: 700; color: var(--primary-color);">
+                                                24/7</div>
+                                            <div style="font-size: 12px; color: var(--gray-600);">Uptime</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology-section" id="technology">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-content">
+                    <div class="section-badge">Advanced Technology</div>
+                    <h3>Deep Learning Architecture</h3>
+                    <p>
+                        Our system leverages cutting-edge deep learning techniques, combining 3D Convolutional
+                        Neural Networks with Long Short-Term Memory networks to achieve unprecedented accuracy
+                        in violence detection and behavioral analysis.
+                    </p>
+                    <ul class="tech-features">
+                        <li>Multi-scale temporal feature extraction</li>
+                        <li>Advanced spatial pattern recognition</li>
+                        <li>Real-time processing optimization</li>
+                        <li>Robust performance across diverse scenarios</li>
+                        <li>Continuous learning and adaptation</li>
+                        <li>High-precision confidence scoring</li>
+                    </ul>
+                </div>
+
+                <div class="tech-visual">
+                    <div class="architecture-diagram">
+                        <div class="arch-layer">
+                            <h4>Input Layer</h4>
+                            <p>Video frames preprocessing and normalization</p>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <h4>3D-CNN Layers</h4>
+                            <p>Spatial-temporal feature extraction</p>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <h4>LSTM Networks</h4>
+                            <p>Sequential pattern analysis</p>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <h4>Classification</h4>
+                            <p>Violence detection with confidence scores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Violence Detection AI</h3>
+                    <p>
+                        Advanced artificial intelligence system for real-time violence detection and behavior analysis.
+                        Built with cutting-edge deep learning technology to enhance security and safety.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Technology</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">3D-CNN Architecture</a></li>
+                        <li><a href="#features">LSTM Processing</a></li>
+                        <li><a href="#features">Real-time Detection</a></li>
+                        <li><a href="#technology">How It Works</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#demo">Try Demo</a></li>
+                        <li><a href="#demo">Upload Video</a></li>
+                        <li><a href="#demo">Live Webcam</a></li>
+                        <li><a href="#demo">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Report Issues</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2024 Violence Detection AI System. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Error Modal -->
+    <div class="modal" id="errorModal" role="dialog" aria-labelledby="error-title" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-icon error">
+                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+            </div>
+            <h3 id="error-title">Error Occurred</h3>
+            <p id="errorMessage">An unexpected error occurred. Please try again.</p>
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="closeErrorModal()" aria-label="Close error message">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                    Close
+                </button>
+                <button class="modal-btn primary" id="retryBtn" style="display:none;" aria-label="Retry action">
+                    <i class="fas fa-redo" aria-hidden="true"></i>
+                    Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+    <!-- Smooth scrolling function -->
+    <script>
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
+</body>
+
+</html>

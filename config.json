@@ -1,0 +1,11 @@
+{
+  "default_threshold": 0.5,
+  "default_frame_skip": 1,
+  "show_fps": true,
+  "show_confidence": true,
+  "auto_save_logs": true,
+  "export_format": "json",
+  "version": "2.0",
+  "created_at": "2025-08-04T08:59:29.796410",
+  "created_by": "127.0.0.1"
+}
